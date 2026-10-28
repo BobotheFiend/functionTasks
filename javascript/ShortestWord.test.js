@@ -7,5 +7,7 @@ test('returns the shortest word from a string', () => {
     expect(shortestWord("A journey of a thousand miles begins with a single step")).toBe("A");
     expect(shortestWord("To be or not to be, that is the question")).toBe("To");
     expect(shortestWord("Alls well that ends well")).toBe("Alls");
+    expect(shortestWord("  ..    ")).toBe("");
 });
+
 

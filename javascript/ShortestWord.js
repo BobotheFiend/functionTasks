@@ -1,10 +1,11 @@
 
 const shortestWord = (input) => {
     let cleanInput = input.trim();
+    cleanInput = cleanInput.replaceAll(/[^a-zA-Z ]/g, "").trim();
     let words = cleanInput.split(" ");
 
         
-    let result = words[0];
+    let result = cleanInput;
 
     for (let word of words) {
         if (word.length < result.length) {
@@ -15,3 +16,4 @@ const shortestWord = (input) => {
 }
 
 module.exports = { shortestWord };
+
